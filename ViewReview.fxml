@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewReviewController">
+   <children>
+      <Label layoutX="36.0" layoutY="46.0" text="Reviews for Service Provider :" />
+      <Label fx:id="lblSPName" layoutX="238.0" layoutY="46.0" />
+      <TableView fx:id="tblReview" layoutX="36.0" layoutY="77.0" prefHeight="418.0" prefWidth="523.0" />
+   </children>
+</AnchorPane>

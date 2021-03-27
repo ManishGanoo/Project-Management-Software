@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculatorController">
+    <children>
+        <Button fx:id="btnCalc" layoutY="857.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Calculator" />
+        <Button fx:id="btnPhotos" layoutY="715.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Photos" />
+        <Button fx:id="btnSP" layoutY="429.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Service Provider" />
+        <Button fx:id="btnTask" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Task" />
+        <Button fx:id="btnPlan" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Plan" />
+        <Button fx:id="btnHome" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Dashboard" />
+        <Button fx:id="btnExpense" layoutY="572.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Expense" />
+        <Label layoutX="206.0" layoutY="38.0" prefHeight="21.0" prefWidth="43.0" text="Paint" />
+        <Label layoutX="1110.0" layoutY="38.0" prefHeight="21.0" prefWidth="43.0" text="Tiles" />
+        <Separator layoutX="205.0" layoutY="58.0" prefHeight="5.0" prefWidth="736.0" />
+        <Separator layoutX="1110.0" layoutY="56.0" prefHeight="5.0" prefWidth="736.0" />
+        <Label layoutX="206.0" layoutY="81.0" prefHeight="21.0" prefWidth="146.0" text="Paint Details:" />
+        <TableView fx:id="tblPaintRoom" layoutX="203.0" layoutY="361.0" prefHeight="354.0" prefWidth="780.0" />
+        <TableView fx:id="tblPaintDetails" layoutX="284.0" layoutY="109.0" prefHeight="143.0" prefWidth="540.0" />
+        <Label fx:id="lblTotalPricePaint" layoutX="573.0" layoutY="544.0" prefHeight="31.0" prefWidth="78.0" />
+        <TextField fx:id="txtPaintLabel" layoutX="284.0" layoutY="253.0" prefHeight="31.0" prefWidth="135.0" />
+        <TextField fx:id="txtNumCoats" layoutX="419.0" layoutY="253.0" prefHeight="31.0" prefWidth="135.0" />
+        <TextField fx:id="txtSpreadRate" layoutX="554.0" layoutY="253.0" prefHeight="31.0" prefWidth="135.0" />
+        <Button fx:id="btnAddPaintLabel" layoutX="823.0" layoutY="253.0" mnemonicParsing="false" text="+" />
+        <Label fx:id="lblTsaTile" layoutX="1481.0" layoutY="263.0" prefHeight="31.0" prefWidth="78.0" />
+      <Label layoutX="199.0" layoutY="322.0" prefHeight="21.0" prefWidth="146.0" text="Room Details:" />
+      <Label layoutX="200.0" layoutY="735.0" prefHeight="21.0" prefWidth="146.0" text="Project Details:" />
+      <GridPane layoutX="340.0" layoutY="771.0" prefHeight="203.0" prefWidth="498.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="21.0" prefWidth="160.0" text="Total Surface Area:" />
+            <Label prefHeight="21.0" prefWidth="160.0" text="Total Number of Litres:" GridPane.rowIndex="1" />
+              <Label prefHeight="21.0" prefWidth="87.0" text="Total Price: " GridPane.rowIndex="2" />
+            <TextField fx:id="txtPaintTSA" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtTotNumLt" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+              <TextField fx:id="txtPaintTotPrice" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="21.0" prefWidth="32.0" text="m²" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="32.0" text="Lt" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+              <Label prefHeight="21.0" prefWidth="32.0" text="Rs" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <TextField fx:id="txtPaintPriceLt" layoutX="689.0" layoutY="253.0" prefHeight="5.0" prefWidth="135.0" />
+      <TextField fx:id="txtPriceTile" layoutX="1601.0" layoutY="244.0" prefHeight="5.0" prefWidth="135.0" />
+      <GridPane layoutX="1257.0" layoutY="757.0" prefHeight="203.0" prefWidth="498.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="160.0" text="Total Surface Area:" />
+            <Label prefHeight="21.0" prefWidth="160.0" text="Total Number of tiles:" GridPane.rowIndex="1" />
+            <Label prefHeight="21.0" prefWidth="87.0" text="Total Price: " GridPane.rowIndex="2" />
+            <TextField fx:id="txtTileTSA" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtTotNumTile" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtTileTotPrice" prefHeight="31.0" prefWidth="78.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="21.0" prefWidth="32.0" text="m²" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="32.0" text="Rs" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="1112.0" layoutY="726.0" prefHeight="21.0" prefWidth="146.0" text="Project Details:" />
+      <Label layoutX="1111.0" layoutY="313.0" prefHeight="21.0" prefWidth="146.0" text="Room Details:" />
+      <Button fx:id="btnAddTileLabel" layoutX="1734.0" layoutY="244.0" mnemonicParsing="false" text="+" />
+      <TextField fx:id="txtTileWidth" layoutX="1466.0" layoutY="244.0" prefHeight="31.0" prefWidth="135.0" />
+      <TextField fx:id="txtTileLength" layoutX="1331.0" layoutY="244.0" prefHeight="31.0" prefWidth="135.0" />
+      <TextField fx:id="txtTileLabel" layoutX="1196.0" layoutY="244.0" prefHeight="31.0" prefWidth="135.0" />
+      <TableView fx:id="tblTileDetails" layoutX="1196.0" layoutY="100.0" prefHeight="143.0" prefWidth="540.0" />
+      <TableView fx:id="tblTileRoom" layoutX="1115.0" layoutY="352.0" prefHeight="354.0" prefWidth="730.0" />
+      <Label layoutX="1118.0" layoutY="72.0" prefHeight="21.0" prefWidth="146.0" text="Tile Details:" />
+      <Button fx:id="btnRemovePaintLabel" layoutX="793.0" layoutY="78.0" mnemonicParsing="false" text="X" />
+      <Button fx:id="btnRemoveTileLabel" layoutX="1705.0" layoutY="67.0" mnemonicParsing="false" text="X" />
+    </children>
+</AnchorPane>

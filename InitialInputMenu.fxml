@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InitialInputMenuController">
+   <children>
+      <Separator layoutX="964.0" layoutY="14.0" orientation="VERTICAL" prefHeight="975.0" prefWidth="5.0" />
+      <Label layoutX="1373.0" layoutY="16.0" text="PDF VIEWER " />
+      <Label layoutX="70.0" layoutY="27.0" text="ROOM DETAILS :" />
+      <Label layoutX="70.0" layoutY="500.0" text="OPENINGS DETAILS :" />
+      <TableView fx:id="tblRooms" layoutX="75.0" layoutY="64.0" prefHeight="302.0" prefWidth="856.0" />
+      <TextField fx:id="txtRoomHeight" layoutX="419.0" layoutY="366.0" prefHeight="25.0" prefWidth="171.0" />
+      <TextField fx:id="txtRoomLength" layoutX="590.0" layoutY="366.0" prefHeight="25.0" prefWidth="171.0" />
+      <TextField fx:id="txtRoomWidth" layoutX="762.0" layoutY="366.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button fx:id="btnAddRoom" layoutX="712.0" layoutY="417.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="ADD" />
+      <TableView fx:id="tblOpenings" layoutX="202.0" layoutY="529.0" prefHeight="253.0" prefWidth="600.0" />
+      <TextField fx:id="txtRoomName" layoutX="76.0" layoutY="366.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button fx:id="btnContinue" layoutX="768.0" layoutY="916.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="157.0" text="CONTINUE" />
+      <ComboBox fx:id="cmbRoomType" layoutX="247.0" layoutY="366.0" prefWidth="171.0" />
+      <Button fx:id="btnDelRoom" layoutX="832.0" layoutY="417.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="DELETE" />
+      <ComboBox fx:id="cmbOPtype" layoutX="204.0" layoutY="782.0" prefWidth="200.0" />
+      <TextField fx:id="txtOPheight" layoutX="404.0" layoutY="782.0" prefWidth="200.0" />
+      <TextField fx:id="txtOPwidth" layoutX="604.0" layoutY="782.0" prefWidth="200.0" />
+      <Button fx:id="btnDelOP" layoutX="831.0" layoutY="841.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="DELETE" />
+      <Button fx:id="btnAddOP" layoutX="711.0" layoutY="841.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="ADD" />
+      <StackPane layoutX="973.0" layoutY="84.0" prefHeight="902.0" prefWidth="933.0">
+         <children>
+            <SwingNode fx:id="swingNode" />
+         </children>
+      </StackPane>
+      <ComboBox fx:id="cmbChoosePlan" layoutX="1756.0" layoutY="45.0" prefWidth="150.0" />
+      <Label layoutX="1665.0" layoutY="50.0" text="Select Plan:" />
+      <Button fx:id="btnSelFile" layoutX="1288.0" layoutY="45.0" mnemonicParsing="false" text="Select File:" />
+      <Label fx:id="lblSelPlan" layoutX="1058.0" layoutY="50.0" prefHeight="21.0" prefWidth="215.0" />
+      <Button fx:id="btnUpload" layoutX="1401.0" layoutY="45.0" mnemonicParsing="false" text="Upload File:" />
+      <Label layoutX="973.0" layoutY="50.0" text="Input Plan:" />
+   </children>
+</AnchorPane>

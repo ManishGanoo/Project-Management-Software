@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateAccountController">
+   <children>
+      <TabPane layoutX="561.0" layoutY="103.0" prefHeight="751.0" prefWidth="799.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="New Client">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnCreateCAcc" layoutX="278.0" layoutY="623.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="244.0" text="Create Client Account" />
+                        <GridPane layoutX="113.0" layoutY="43.0" prefHeight="515.0" prefWidth="574.0">
+                           <children>
+                              <Label text="Name: " />
+                              <TextField fx:id="txtCName" GridPane.columnIndex="1" />
+                              <Label text="Phone:" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtCPhone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Email:" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtCEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Address:" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtCAddress" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Username:" GridPane.rowIndex="5" />
+                              <Label text="Input New Password:" GridPane.rowIndex="6" />
+                              <Label text="Input New Password again:" GridPane.rowIndex="7" />
+                              <TextField fx:id="txtCUName" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <PasswordField fx:id="txtCPass" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <PasswordField fx:id="txtCPass1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="284.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="New Service Provider">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="733.0" prefWidth="799.0">
+                     <children>
+                        <Button fx:id="btnCreateSAcc" layoutX="278.0" layoutY="625.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="244.0" text="Create Service Provider Account" />
+                        <GridPane layoutX="113.0" layoutY="43.0" prefHeight="515.0" prefWidth="574.0">
+                           <children>
+                              <Label text="Company Name: " />
+                              <TextField fx:id="txtSName" GridPane.columnIndex="1" />
+                              <Label text="Phone:" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtSPhone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Email:" GridPane.rowIndex="2" />
+                              <Label fx:id="lblType11" text="Type:" GridPane.rowIndex="4" />
+                              <TextField fx:id="txtSEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Address:" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtSAddress" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="cmbSPType" prefHeight="31.0" prefWidth="285.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Username:" GridPane.rowIndex="6" />
+                              <Label text="Input New Password:" GridPane.rowIndex="7" />
+                              <Label text="Input New Password again:" GridPane.rowIndex="8" />
+                              <TextField fx:id="txtSUName" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <PasswordField fx:id="txtSPass" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <PasswordField fx:id="txtSPass1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="284.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnBackToLog" layoutX="40.0" layoutY="32.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#changeScreen" prefHeight="60.0" prefWidth="68.0" text="&lt;-">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

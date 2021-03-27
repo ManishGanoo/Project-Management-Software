@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SP_Side_QuotationController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e2a36" height="1000.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+      <Button fx:id="btnProfile" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Profile" />
+      <Button fx:id="btnQuotation" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Quotation" />
+      <Button fx:id="btnClient" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Client" />
+      <Label layoutX="181.0" layoutY="38.0" text="Quotation Request Table:" />
+      <Separator layoutX="960.0" layoutY="12.0" orientation="VERTICAL" prefHeight="971.0" prefWidth="6.0" />
+      <TableView fx:id="tblQuoReq" layoutX="181.0" layoutY="83.0" prefHeight="416.0" prefWidth="687.0" />
+      <Button fx:id="btnAcceptQuo" layoutX="307.0" layoutY="877.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="178.0" text="BUILD QUOTATION" />
+      <Button fx:id="btnRefuse" layoutX="555.0" layoutY="877.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="178.0" text="REFUSE" />
+      <StackPane layoutX="979.0" layoutY="77.0" prefHeight="907.0" prefWidth="933.0">
+         <children>
+            <SwingNode fx:id="swingNode" />
+         </children>
+      </StackPane>
+      <Label layoutX="181.0" layoutY="545.0" text="Temporary Start Date :" />
+      <TextField fx:id="txtTempStartDate" layoutX="340.0" layoutY="540.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextArea fx:id="txaNotes" layoutX="339.0" layoutY="590.0" prefHeight="192.0" prefWidth="532.0" />
+      <Label layoutX="182.0" layoutY="583.0" text="Notes :" />
+      <Label fx:id="lblAvailability" layoutX="532.0" layoutY="545.0" prefHeight="21.0" prefWidth="205.0" textFill="#e80909" />
+      <Label layoutX="979.0" layoutY="38.0" text="Select Plan:" />
+      <ComboBox fx:id="cmbChoosePlan" layoutX="1077.0" layoutY="33.0" prefHeight="31.0" prefWidth="197.0" />
+      <Label layoutX="1401.0" layoutY="18.0" text="PDF VIEWER " />
+   </children>
+</AnchorPane>

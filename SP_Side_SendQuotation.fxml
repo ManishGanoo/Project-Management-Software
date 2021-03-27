@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SP_Side_SendQuotationController">
+   <children>
+      <Button fx:id="btnRemoveRM" layoutX="892.0" layoutY="410.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0" text="X" />
+      <Button fx:id="btnSendQuo" layoutX="420.0" layoutY="894.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="174.0" text="Send Quotation" />
+      <Label layoutX="135.0" layoutY="52.0" text="Date Start:" />
+      <Label layoutX="888.0" layoutY="42.0" prefHeight="39.0" prefWidth="146.0" text="Quotation">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblRawMaterial" layoutX="61.0" layoutY="207.0" prefHeight="203.0" prefWidth="873.0" />
+      <TextField fx:id="txtLCost" layoutX="773.0" layoutY="116.0" prefHeight="31.0" prefWidth="161.0" />
+      <Button fx:id="btnAddRM" layoutX="662.0" layoutY="410.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="230.0" text="Add Item to Raw Material List" />
+      <TextField fx:id="txtDuration" layoutX="140.0" layoutY="116.0" prefHeight="31.0" prefWidth="68.0" />
+      <Label layoutX="63.0" layoutY="121.0" text="Duration:" />
+      <Label layoutX="62.0" layoutY="186.0" text="Raw Materials List" />
+      <DatePicker fx:id="dtpDateStart" layoutX="243.0" layoutY="47.0" prefHeight="31.0" prefWidth="187.0" />
+      <TextField fx:id="txtItemPrice" layoutX="246.0" layoutY="410.0" />
+      <Label layoutX="674.0" layoutY="121.0" text="Labour Cost:" />
+      <TextField fx:id="txtItemQuantity" layoutX="433.0" layoutY="410.0" />
+      <TableView fx:id="tblTask" layoutX="61.0" layoutY="548.0" prefHeight="249.0" prefWidth="870.0" />
+      <Label layoutX="59.0" layoutY="527.0" text="Task Details Table" />
+      <Button fx:id="btnBackToQuo" layoutX="40.0" layoutY="32.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#changeScreen" prefHeight="60.0" prefWidth="68.0" text="&lt;-">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtTaskName" layoutX="60.0" layoutY="797.0" prefHeight="31.0" prefWidth="174.0" />
+      <TextField fx:id="txtTaskDetails" layoutX="234.0" layoutY="797.0" prefHeight="31.0" prefWidth="174.0" />
+      <TextField fx:id="txtTaskDuration" layoutX="581.0" layoutY="797.0" prefHeight="31.0" prefWidth="174.0" />
+      <DatePicker fx:id="dtpTaskSDate" layoutX="408.0" layoutY="797.0" prefHeight="31.0" prefWidth="174.0" />
+      <Button fx:id="btnAddTask" layoutX="757.0" layoutY="797.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" text="Add Task" />
+      <Button fx:id="btnRemoveTask" layoutX="893.0" layoutY="797.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0" text="X" />
+      <Label fx:id="lblCheckDates" layoutX="478.0" layoutY="842.0" prefHeight="25.0" prefWidth="222.0" textFill="#f20f0f" />
+      <TabPane layoutX="972.0" layoutY="97.0" prefHeight="891.0" prefWidth="936.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="PDF Viewer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="645.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="11.0" text="Plans:" />
+                        <ComboBox fx:id="cmbChoosePlan" layoutX="58.0" layoutY="6.0" prefWidth="150.0" />
+                        <StackPane layoutY="41.0" prefHeight="812.0" prefWidth="936.0">
+                           <children>
+                              <SwingNode fx:id="swingNode" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabGantt" text="Gantt Chart">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane layoutX="1.0" layoutY="1.0" prefHeight="854.0" prefWidth="936.0">
+                           <children>
+                              <SwingNode fx:id="gswingNode" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabRoom" text="Room details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblOpenings" layoutX="33.0" layoutY="504.0" prefHeight="319.0" prefWidth="873.0" />
+                        <TableView fx:id="tblRooms" layoutX="33.0" layoutY="85.0" prefHeight="346.0" prefWidth="873.0" />
+                        <Label layoutX="33.0" layoutY="472.0" text="OPENINGS DETAILS :" />
+                        <Label layoutX="33.0" layoutY="50.0" text="ROOM DETAILS :" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="lblMasRoof" layoutX="187.0" layoutY="527.0" prefHeight="17.0" prefWidth="340.0" textFill="#18e12f" />
+      <Label fx:id="lblRMTotal" layoutX="234.0" layoutY="121.0" text="Raw Material Total" />
+      <TextField fx:id="txtRMTotal" layoutX="379.0" layoutY="116.0" prefHeight="31.0" prefWidth="83.0" />
+      <TextField fx:id="txtUnitCost" layoutX="557.0" layoutY="116.0" prefHeight="31.0" prefWidth="83.0" />
+      <Label fx:id="lblUnitCost" layoutX="478.0" layoutY="121.0" text="Cost(ft²):" />
+      <ComboBox fx:id="cmbItemName" layoutX="60.0" layoutY="410.0" prefHeight="31.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>

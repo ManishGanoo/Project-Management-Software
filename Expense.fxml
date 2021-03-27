@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExpenseController">
+   <children>
+        <Button fx:id="btnCalc" layoutY="857.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Calculator" />
+        <Button fx:id="btnPhotos" layoutY="715.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Photos" />
+        <Button fx:id="btnSP" layoutY="429.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Service Provider" />
+        <Button fx:id="btnTask" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Task" />
+        <Button fx:id="btnPlan" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Plan" />
+        <Button fx:id="btnHome" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Dashboard" />
+        <Label layoutX="298.0" layoutY="133.0" text="Expense" />
+        <Button fx:id="btnExpense" layoutY="572.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Expense" />
+        
+        <TableView fx:id="tblExpense" layoutX="168.0" layoutY="24.0" prefHeight="537.0" prefWidth="745.0" />
+        <Pane fx:id="paneFirstChart" layoutX="1111.0" layoutY="45.0" prefHeight="405.0" prefWidth="608.0" />
+        <Pane fx:id="paneBarChart" layoutX="1111.0" layoutY="519.0" prefHeight="446.0" prefWidth="775.0" />
+        <Label layoutX="192.0" layoutY="599.0" prefHeight="35.0" prefWidth="230.0" text="Expense Details: ">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="192.0" layoutY="643.0" text="Date :">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="192.0" layoutY="698.0" text="Service Provider :">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="192.0" layoutY="753.0" text="Expense Type :">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblExpDetails" layoutX="192.0" layoutY="808.0" text="Details :">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="192.0" layoutY="868.0" text="Amount :">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnAddExp" layoutX="646.0" layoutY="868.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Add New Expense" />
+        <DatePicker fx:id="datePicker" layoutX="401.0" layoutY="643.0" />
+        <ComboBox fx:id="cmbSP" layoutX="401.0" layoutY="698.0" prefHeight="25.0" prefWidth="174.0" />
+        <ComboBox fx:id="cmbExpType" layoutX="401.0" layoutY="753.0" prefHeight="25.0" prefWidth="174.0" />
+        <TextField fx:id="txtExpDetails" layoutX="401.0" layoutY="808.0" prefHeight="25.0" prefWidth="174.0" />
+        <TextField fx:id="txtExpAmount" layoutX="401.0" layoutY="868.0" prefHeight="25.0" prefWidth="174.0" />
+        <Button fx:id="btnRemoveExp" layoutX="646.0" layoutY="809.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Remove Expense" />
+   </children>
+</AnchorPane>

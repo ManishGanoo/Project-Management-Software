@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlanController">
+       <children>
+        <Button fx:id="btnCalc" layoutY="857.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Calculator" />
+        <Button fx:id="btnPhotos" layoutY="715.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Photos" />
+        <Button fx:id="btnSP" layoutY="429.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Service Provider" />
+        <Button fx:id="btnTask" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Task" />
+        <Button fx:id="btnPlan" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Plan" />
+        <Button fx:id="btnHome" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Dashboard" />
+        <Button fx:id="btnExpense" layoutY="572.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Expense" />
+      <StackPane layoutX="167.0" layoutY="128.0" prefHeight="850.0" prefWidth="1734.0">
+         <children>
+            <SwingNode fx:id="swingNode" />
+         </children>
+      </StackPane>
+      <Label layoutX="171.0" layoutY="47.0" text="Input Plan:" />
+      <Button fx:id="btnUpload" layoutX="471.0" layoutY="87.0" mnemonicParsing="false" text="Upload File:" />
+      <ComboBox fx:id="cmbChoosePlan" layoutX="584.0" layoutY="43.0" prefWidth="150.0" />
+      <Label fx:id="lblSelPlan" layoutX="256.0" layoutY="47.0" prefHeight="21.0" prefWidth="215.0" />
+      <Button fx:id="btnSelFile" layoutX="471.0" layoutY="43.0" mnemonicParsing="false" text="Select File:" />
+   </children>
+</AnchorPane>

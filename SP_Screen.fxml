@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SP_ScreenController">
+   <children>
+        <Button fx:id="btnCalc" layoutY="857.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Calculator" />
+        <Button fx:id="btnPhotos" layoutY="715.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Photos" />
+        <Button fx:id="btnSP" layoutY="429.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Service Provider" />
+        <Button fx:id="btnTask" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Task" />
+        <Button fx:id="btnPlan" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Plan" />
+        <Button fx:id="btnHome" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Dashboard" />
+        <Label layoutX="298.0" layoutY="133.0" text="SP" />
+        <Button fx:id="btnExpense" layoutY="572.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Expense" />
+  
+        <TabPane layoutX="146.0" prefHeight="1000.0" prefWidth="1771.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Service Provider">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="961.0" prefWidth="1756.0">
+                     <children>
+                        <TableView fx:id="tblSP" layoutX="14.0" layoutY="43.0" prefHeight="312.0" prefWidth="857.0" />
+                        <Label layoutX="14.0" layoutY="21.0" text="Service Provider Table" />
+                        <Button fx:id="btnEditSP" layoutX="1584.0" layoutY="360.0" mnemonicParsing="false" text="Edit Service Provider" />
+                        <Label layoutX="946.0" layoutY="60.0" text="Company Name: " />
+                        <Label layoutX="946.0" layoutY="96.0" text="Phone:" />
+                        <Label layoutX="946.0" layoutY="139.0" text="Email:" />
+                        <TextField fx:id="txtEmail" layoutX="1135.0" layoutY="145.0" />
+                        <TextField fx:id="txtPhone" layoutX="1136.0" layoutY="102.0" />
+                        <TextField fx:id="txtSPName" layoutX="1136.0" layoutY="55.0" />
+                        <Label fx:id="lblCommentsReview" layoutX="946.0" layoutY="196.0" text="Comments" />
+                        <Label fx:id="lblType" layoutX="1371.0" layoutY="55.0" text="Type:" />
+                        <TextArea fx:id="txaComments" layoutX="1137.0" layoutY="196.0" prefHeight="147.0" prefWidth="600.0" />
+                        <TableView fx:id="tblTask" layoutX="907.0" layoutY="476.0" prefHeight="392.0" prefWidth="857.0" />
+                        <Label layoutX="906.0" layoutY="431.0" text="Task Details Table" />
+                        <Button fx:id="btnAddNewSP" layoutX="629.0" layoutY="360.0" mnemonicParsing="false" text="Create Non-User Service Provider" />
+                        <TextField fx:id="txtItemQuantity" layoutX="393.0" layoutY="867.0" />
+                        <Label layoutX="685.0" layoutY="481.0" text="Labour Cost:" />
+                        <TextField fx:id="txtItemPrice" layoutX="206.0" layoutY="867.0" />
+                        <DatePicker fx:id="dtpDateStart" layoutX="95.0" layoutY="476.0" prefHeight="31.0" prefWidth="187.0" />
+                        <Label layoutX="18.0" layoutY="518.0" text="Raw Materials List" />
+                        <Label layoutX="291.0" layoutY="481.0" text="Duration:" />
+                        <TextField fx:id="txtDuration" layoutX="368.0" layoutY="476.0" prefHeight="31.0" prefWidth="68.0" />
+                        <Button fx:id="btnAddRM" layoutX="622.0" layoutY="867.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="230.0" text="Add Item to Raw Material List" />
+                        <TextField fx:id="txtLCost" layoutX="777.0" layoutY="476.0" prefHeight="31.0" prefWidth="115.0" />
+                        <TableView fx:id="tblRawMaterial" layoutX="19.0" layoutY="539.0" prefHeight="326.0" prefWidth="873.0" />
+                        <Label layoutX="19.0" layoutY="431.0" text="Quotation" />
+                        <Label layoutX="18.0" layoutY="481.0" text="Date Start:" />
+                        <Label layoutX="907.0" layoutY="21.0" text="Service Provider Details" />
+                        <Separator layoutX="15.0" layoutY="417.0" prefHeight="3.0" prefWidth="1747.0" />
+                        <Button fx:id="btnAddQuo" layoutX="901.0" layoutY="910.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="230.0" text="Create Quotation">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                        <Button fx:id="btnRemoveRM" layoutX="853.0" layoutY="867.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0" text="X" />
+                        <TextField fx:id="txtType" layoutX="1439.0" layoutY="50.0" />
+                        <Button fx:id="btnReview" layoutX="1404.0" layoutY="360.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="165.0" text="Leave Review" />
+                        <Button fx:id="btnDeleteSP" layoutX="436.0" layoutY="360.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="177.0" text="Delete Service Provider" />
+                        <TextField fx:id="txtTaskName" layoutX="907.0" layoutY="867.0" prefWidth="170.0" />
+                        <TextField fx:id="txtTaskDetails" layoutX="1077.0" layoutY="867.0" prefWidth="170.0" />
+                        <DatePicker fx:id="dtpTaskSDate" layoutX="1246.0" layoutY="867.0" prefHeight="31.0" prefWidth="175.0" />
+                        <TextField fx:id="txtTaskDuration" layoutX="1421.0" layoutY="867.0" prefWidth="170.0" />
+                        <ComboBox fx:id="cmbTaskStatus" layoutX="1592.0" layoutY="867.0" prefHeight="31.0" prefWidth="170.0" />
+                        <Button fx:id="btnAddTask" layoutX="1640.0" layoutY="898.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="93.0" text="Add Task" />
+                        <Button fx:id="btnRemoveTask" layoutX="1733.0" layoutY="898.0" mnemonicParsing="false" text="X" />
+                        <Label fx:id="lblCheckDates" layoutX="1174.0" layoutY="910.0" prefHeight="21.0" prefWidth="430.0" />
+                        <Label layoutX="443.0" layoutY="481.0" text="Raw Material Total: " />
+                        <TextField fx:id="txtRMTotal" layoutX="584.0" layoutY="476.0" prefHeight="31.0" prefWidth="91.0" />
+                        <Button fx:id="btnEditQuo" layoutX="653.0" layoutY="910.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="230.0" text="Edit Quotation">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="cmbItemName" layoutX="20.0" layoutY="867.0" prefHeight="31.0" prefWidth="186.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Quotation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblSPReqQuo" layoutX="23.0" layoutY="69.0" prefHeight="420.0" prefWidth="853.0" />
+                        <TableView fx:id="tblRecQuotation" layoutX="25.0" layoutY="559.0" prefHeight="373.0" prefWidth="849.0" />
+                        <Label layoutX="23.0" layoutY="41.0" text="List of Service Provider" />
+                        <Label layoutX="22.0" layoutY="517.0" text="Received Quotation" />
+                        <Label layoutX="23.0" layoutY="14.0" text="Type:" />
+                        <ComboBox fx:id="cmbQuoType" layoutX="79.0" layoutY="9.0" prefWidth="150.0" />
+                        <Label layoutX="930.0" layoutY="40.0" text="Request Details" />
+                        <Label layoutX="936.0" layoutY="126.0" prefHeight="21.0" prefWidth="63.0" text="Name:" />
+                        <Label layoutX="939.0" layoutY="269.0" text="Address:" />
+                        <Label layoutX="933.0" layoutY="174.0" text="Telephone:" />
+                        <Label layoutX="936.0" layoutY="223.0" text="Email:" />
+                        <Label layoutX="937.0" layoutY="317.0" text="Job Details:" />
+                        <TextArea fx:id="txaQuoComments" layoutX="1021.0" layoutY="311.0" prefHeight="125.0" prefWidth="680.0" />
+                        <Button fx:id="btnSendReq" layoutX="1287.0" layoutY="448.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="181.0" text="Send Request" />
+                        <TextField fx:id="txtCName" layoutX="1022.0" layoutY="121.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="txtCAddr" layoutX="1022.0" layoutY="264.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="txtCTel" layoutX="1022.0" layoutY="169.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="txtCEmail" layoutX="1022.0" layoutY="218.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="txtSID" layoutX="1022.0" layoutY="79.0" prefHeight="31.0" prefWidth="67.0" />
+                        <Label layoutX="939.0" layoutY="84.0" prefHeight="21.0" prefWidth="33.0" text="SID:" />
+                        <Label layoutX="913.0" layoutY="506.0" text="Quotation" />
+                        <Button fx:id="btnAcpQuo" layoutX="1048.0" layoutY="892.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" text="Accept Quotation" />
+                        <Button fx:id="btnRefQuo" layoutX="1407.0" layoutY="892.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" text="Refuse Quotation" />
+                        <Separator layoutX="12.0" layoutY="496.0" prefHeight="3.0" prefWidth="1747.0" />
+                        <Button fx:id="btnViewReview" layoutX="1103.0" layoutY="79.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="View Review" />
+                        <Label layoutX="1290.0" layoutY="223.0" prefHeight="21.0" prefWidth="155.0" text="Temporary Start Date:" />
+                        <TextField fx:id="txtTSDate" layoutX="1470.0" layoutY="218.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="txtSPType" layoutX="1476.0" layoutY="79.0" prefHeight="31.0" prefWidth="200.0" />
+                        <Label layoutX="1296.0" layoutY="84.0" prefHeight="21.0" prefWidth="63.0" text="SP Type:" />
+                        <Label fx:id="lbldatesclash" layoutX="160.0" layoutY="517.0" prefHeight="21.0" prefWidth="715.0" textFill="#d71515" />
+                        <TabPane layoutX="906.0" layoutY="538.0" prefHeight="321.0" prefWidth="847.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabTaskQuo" text="Tasks">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tblQuoTask" prefHeight="283.0" prefWidth="852.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tabQuoRM" text="Raw Materials">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tblQuoRM" layoutX="-1.0" prefHeight="283.0" prefWidth="852.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Label fx:id="lblStartDate" layoutX="1470.0" layoutY="269.0" prefHeight="21.0" prefWidth="204.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+        
+   </children>
+</AnchorPane>

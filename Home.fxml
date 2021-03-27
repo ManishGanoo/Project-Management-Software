@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+        <Button fx:id="btnCalc" layoutY="857.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Calculator" />
+        <Button fx:id="btnPhotos" layoutY="715.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Photos" />
+        <Button fx:id="btnSP" layoutY="429.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Service Provider" />
+        <Button fx:id="btnTask" layoutY="286.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Task" />
+        <Button fx:id="btnPlan" layoutY="143.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Plan" />
+        <Button fx:id="btnHome" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Dashboard" />
+        <Label layoutX="171.0" layoutY="47.0" text="Project:" />
+        <Button fx:id="btnExpense" layoutY="572.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="143.0" prefWidth="146.0" text="Expense" />
+      <TabPane layoutX="981.0" layoutY="86.0" prefHeight="890.0" prefWidth="914.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabGanttChart" text="Gantt Chart">
+            <content>
+                  <StackPane>
+                     <children>
+                        <SwingNode fx:id="gswingNode" />
+                     </children>
+                  </StackPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabExpenseChart" text="Expense Chart">
+            <content>
+                  <Pane fx:id="paneExpenseChart" />
+            </content>
+          </Tab>
+            <Tab fx:id="tabSPChart" text="Service Provider Chart">
+               <content>
+                  <Pane fx:id="paneBarChart" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="176.0" layoutY="106.0" text="Notifications" />
+      <TextField fx:id="txtProjectName" layoutX="268.0" layoutY="42.0" />
+      <Label layoutX="496.0" layoutY="47.0" text="Address:" />
+      <TextField fx:id="txtProjectAddress" layoutX="601.0" layoutY="43.0" />
+      <Label fx:id="lblTime" layoutX="1682.0" layoutY="16.0" prefHeight="21.0" prefWidth="124.0" />
+      <Label fx:id="lblDate" layoutX="1682.0" layoutY="35.0" prefHeight="21.0" prefWidth="124.0" />
+      <TableView fx:id="tblNotification" layoutX="176.0" layoutY="143.0" prefHeight="240.0" prefWidth="749.0" />
+      <Label fx:id="lblNotification" layoutX="179.0" layoutY="399.0" prefHeight="21.0" prefWidth="489.0" />
+      <Button fx:id="btnRefuseExtension" layoutX="860.0" layoutY="405.0" mnemonicParsing="false" text="Refuse" />
+      <Button fx:id="btnAcceptExtension" layoutX="770.0" layoutY="405.0" mnemonicParsing="false" text="Accept" />
+      <Button fx:id="btnLogOut" layoutX="1818.0" layoutY="16.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="55.0" prefWidth="88.0" text="Log Out" />
+      <Label layoutX="179.0" layoutY="501.0" text="Remaining Budget" />
+      <Label fx:id="lblBudgetRemaining" layoutX="282.0" layoutY="539.0" prefHeight="53.0" prefWidth="249.0" textFill="#2613d0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="546.0" layoutY="539.0" text="/" textFill="#2613d0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="lblBudgetTotal" layoutX="576.0" layoutY="539.0" prefHeight="53.0" prefWidth="249.0" textFill="#2613d0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Pane fx:id="Panebudget" layoutX="176.0" layoutY="635.0" prefHeight="276.0" prefWidth="749.0" />
+      <Button fx:id="btnAlterBudget" layoutX="828.0" layoutY="936.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="104.0" text="Alter Budget" />
+      <TextField fx:id="txtPlannedEDate" layoutX="1306.0" layoutY="42.0" />
+      <Label layoutX="1170.0" layoutY="47.0" text="Planned End Date:" />
+      <TextField fx:id="txtSDate" layoutX="942.0" layoutY="42.0" />
+      <Label layoutX="845.0" layoutY="47.0" text="Start Date:" />
+      <Button fx:id="btnSummary" layoutX="851.0" layoutY="91.0" mnemonicParsing="false" text="Summary" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="833.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddTaskController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="158.0" layoutY="520.0" text="Task Name:" />
+      <Label alignment="TOP_CENTER" layoutX="155.0" layoutY="559.0" text="Task Details:" />
+      <Label alignment="TOP_CENTER" layoutX="153.0" layoutY="599.0" text="Start Date:" />
+      <Label alignment="TOP_CENTER" layoutX="157.0" layoutY="643.0" text="Duration:" />
+      <Label alignment="TOP_CENTER" layoutX="157.0" layoutY="686.0" text="Task Status:" />
+      <TextField fx:id="txtTaskName" layoutX="262.0" layoutY="515.0" />
+      <TextField fx:id="txtTaskDetails" layoutX="262.0" layoutY="554.0" />
+      <TextField fx:id="txtTaskDuration" layoutX="262.0" layoutY="638.0" />
+      <TableView fx:id="tblTask" layoutX="25.0" layoutY="63.0" prefHeight="403.0" prefWidth="668.0" />
+      <Label layoutX="25.0" layoutY="27.0" text="Task Table" />
+      <Button fx:id="btnAddTask" layoutX="262.0" layoutY="740.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" text="Add Task" />
+      <DatePicker fx:id="dtpTaskSDate" layoutX="262.0" layoutY="594.0" prefHeight="31.0" prefWidth="187.0" />
+      <ComboBox fx:id="cmbTaskStatus" layoutX="262.0" layoutY="681.0" prefHeight="31.0" prefWidth="187.0" />
+      <Button fx:id="btnRemoveTask" layoutX="664.0" layoutY="476.0" mnemonicParsing="false" text="X" />
+   </children>
+</AnchorPane>
