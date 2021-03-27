@@ -1,0 +1,2 @@
+# Project-Management-Software
+Final Year Project with Java and Java Swing framework and PDF Viewer. The objective was to build a home construction management tool that allows users to draw the plan of their house, manage the budget and costs, and connect them with service providers such as an electrician, plumber, etc. Charts such as Gannt chart, Pert Chart and Pie Char were provided to allow the user to easily grasp an overview of their construction.
